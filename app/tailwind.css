@@ -4,9 +4,13 @@
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  @apply bg-[#02040a];
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+.navbar {
+  @apply fixed z-50 flex h-24 w-full items-center justify-center border-b border-transparent bg-transparent px-6 duration-300 lg:px-20;
+}
+
+.navbar--active {
+  @apply border-gray-700 bg-[#02040a];
 }
