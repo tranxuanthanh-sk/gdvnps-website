@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
 
-export default function NavbarLayout({children}: {children: React.ReactNode}) {
-	const [navbarOnScroll, setNavbarOnScroll] = useState<string>('');
+export default function NavbarLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const [navbarOnScroll, setNavbarOnScroll] = useState<string>("");
 
-	useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
         setNavbarOnScroll("navbar--active");
@@ -20,9 +24,7 @@ export default function NavbarLayout({children}: {children: React.ReactNode}) {
 
   return (
     <nav className={`navbar ${navbarOnScroll}`}>
-			<nav className="flex w-full items-center justify-between">
-				{children}
-			</nav>
-		</nav>
-  )
+      <nav className="flex w-full items-center justify-between">{children}</nav>
+    </nav>
+  );
 }
