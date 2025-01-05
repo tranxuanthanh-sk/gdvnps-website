@@ -3,19 +3,19 @@
 }
 
 .star-bg__obj {
-  @apply absolute rounded-full [animation-duration:45s] [animation-iteration-count:infinite];
+  @apply absolute rounded-full [animation-duration:40s] [animation-iteration-count:infinite];
 }
 
 .star-bg__obj:nth-child(odd) {
-  @apply h-2 w-2 bg-red-500 shadow-[0,0,3px,#ef4444];
+  @apply h-2 w-2 bg-red-400 shadow-[0,0,3px,#f87171];
 }
 
 .star-bg__obj:nth-child(even) {
-  @apply h-1 w-1 bg-yellow-400 shadow-[0,0,2px,#facc15];
+  @apply h-1 w-1 bg-yellow-300 shadow-[0,0,2px,#facc15];
 }
 
 .star-bg__obj:nth-child(1) {
-  @apply opacity-45 [animation-name:star-bg-animation1] [animation-delay:-0.2s] [transform:translate3d(90vw,79vh,22px)];
+  @apply opacity-50 [animation-name:star-bg-animation1] [animation-delay:-0.2s] [transform:translate3d(90vw,79vh,22px)];
 }
 
 @keyframes star-bg-animation1 {

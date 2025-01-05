@@ -1,5 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
-import styles from "./style/star-bg.module.css";
+import { StarBG } from "~/components/shared/StarBG";
 
 export const meta: MetaFunction = () => {
   return [
@@ -14,27 +14,9 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className={styles["star-bg"]}>
-      <div className={styles["star-bg__obj"]}></div>
-      <div className={styles["star-bg__obj"]}></div>
-      <div className={styles["star-bg__obj"]}></div>
-      <div className={styles["star-bg__obj"]}></div>
-      <div className={styles["star-bg__obj"]}></div>
-      <div className={styles["star-bg__obj"]}></div>
-      <div className={styles["star-bg__obj"]}></div>
-      <div className={styles["star-bg__obj"]}></div>
-      <div className={styles["star-bg__obj"]}></div>
-      <div className={styles["star-bg__obj"]}></div>
-      <div className={styles["star-bg__obj"]}></div>
-      <div className={styles["star-bg__obj"]}></div>
-      <div className={styles["star-bg__obj"]}></div>
-      <div className={styles["star-bg__obj"]}></div>
-      <div className={styles["star-bg__obj"]}></div>
-      <div className={styles["star-bg__obj"]}></div>
-      <div className={styles["star-bg__obj"]}></div>
-      <div className={styles["star-bg__obj"]}></div>
-      <div className={styles["star-bg__obj"]}></div>
-      <div className={styles["star-bg__obj"]}></div>
-    </div>
+    <>
+      <StarBG />
+      <div className="w-full h-full max-h-screen bg-transparent"></div>
+    </>
   );
 }

@@ -1,11 +1,30 @@
+import { useState, createContext } from "react";
+import { Link } from "@remix-run/react";
 import { Icon } from "@iconify/react";
+import NavbarMenu from "./NavbarMenu";
 import GDVNPS_Icon from "~/assets/gdvnps-no-bg.svg";
 
+interface NavbarContextType {
+  navbarOpen: boolean;
+  openNavbarMenu: () => void;
+}
+
+export const NavbarContext = createContext<NavbarContextType>({
+  navbarOpen: false,
+  openNavbarMenu: () => {},
+});
+
 export default function NavbarContent() {
+  const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
+
+  const openNavbarMenu = () => {
+    setNavbarOpen(!navbarOpen);
+  };
+
   return (
-    <>
-      <div className="h-fit w-fit">
-        <a href="/" className="no-underline inline-block">
+    <NavbarContext.Provider value={{ navbarOpen, openNavbarMenu }}>
+      <div className="h-fit w-fit z-30">
+        <Link to="/" className="no-underline inline-block">
           <img
             src={GDVNPS_Icon}
             alt="GDVNPS's logo"
@@ -13,18 +32,19 @@ export default function NavbarContent() {
             height={58}
             className="pointer-events-none select-none"
           />
-        </a>
+        </Link>
       </div>
-      <div>
-        <button className="[all:unset] cursor-pointer">
+      <div className="z-50">
+        <button onClick={openNavbarMenu} className="cursor-pointer">
           <Icon
-            icon="ri:menu-3-fill"
+            icon={!navbarOpen ? "ri:menu-3-fill" : "ri:close-large-line"}
             width="30"
             height="30"
             className="fill-slate-200"
           />
         </button>
       </div>
-    </>
+      <NavbarMenu />
+    </NavbarContext.Provider>
   );
 }
