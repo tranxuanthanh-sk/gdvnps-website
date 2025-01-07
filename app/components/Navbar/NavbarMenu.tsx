@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import clsx from "clsx";
 import { NavbarContext } from "./NavbarContent";
 import { LinkTag } from "../UI";
@@ -7,15 +7,26 @@ import styles from "~/style/NavbarMenu.module.css";
 
 export default function NavbarMenu() {
   const { navbarOpen, openNavbarMenu } = useContext(NavbarContext);
+  const [loaded, setLoaded] = useState<boolean>(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoaded(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div
       className={clsx(styles.navbar__menu, {
+        [styles["navbar__menu--loaded"]]: loaded,
         [styles["navbar__menu--opened"]]: navbarOpen,
       })}
     >
       <div className="w-full absolute h-full top-0 left-0 flex">
-        <div className="flex mx-5 lg:mx-14 items-center flex-col bg-transparent w-fit justify-center">
+        <div
+          className={clsx(styles["navbar__menu-wrap"], {
+            [styles["navbar__menu-wrap--opened"]]: navbarOpen,
+          })}
+        >
           <LinkTag
             tag="link"
             variant="navbar"

@@ -1,8 +1,8 @@
 import { useState, createContext } from "react";
 import { Link } from "@remix-run/react";
 import { Icon } from "@iconify/react";
-import NavbarMenu from "./NavbarMenu";
 import GDVNPS_Icon from "~/assets/gdvnps-no-bg.svg";
+import NavbarMenu from "./NavbarMenu";
 
 interface NavbarContextType {
   navbarOpen: boolean;
