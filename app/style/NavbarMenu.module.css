@@ -52,7 +52,7 @@
 }
 
 .navbar__menu-wrap {
-  @apply flex mx-5 lg:mx-14 items-center flex-col bg-transparent w-fit justify-center;
+  @apply flex mx-5 md:mx-16 lg:mx-36 items-center flex-col bg-transparent w-fit justify-center;
 }
 
 .navbar__menu-wrap--opened {

@@ -5,6 +5,12 @@ import { LinkTag } from "../UI";
 import { StarBG } from "../shared/StarBG";
 import styles from "~/style/NavbarMenu.module.css";
 
+type NavLinkObjType = {
+  id: number;
+  name: string;
+  href: string;
+}[];
+
 export default function NavbarMenu() {
   const { navbarOpen, openNavbarMenu } = useContext(NavbarContext);
   const [loaded, setLoaded] = useState<boolean>(false);
@@ -13,6 +19,12 @@ export default function NavbarMenu() {
     const timer = setTimeout(() => setLoaded(true), 100);
     return () => clearTimeout(timer);
   }, []);
+
+  const navLinks: NavLinkObjType = [
+    { id: 1, name: "TRANG CHỦ", href: "/" },
+    { id: 2, name: "TẢI XUỐNG", href: "/download" },
+    { id: 3, name: "FAQ", href: "faq" },
+  ];
 
   return (
     <div
@@ -27,24 +39,18 @@ export default function NavbarMenu() {
             [styles["navbar__menu-wrap--opened"]]: navbarOpen,
           })}
         >
-          <LinkTag
-            tag="link"
-            variant="navbar"
-            toHref="/"
-            className="my-6"
-            onClick={openNavbarMenu}
-          >
-            TRANG CHỦ
-          </LinkTag>
-          <LinkTag
-            tag="link"
-            variant="navbar"
-            toHref="/download"
-            className="my-6"
-            onClick={openNavbarMenu}
-          >
-            TẢI XUỐNG
-          </LinkTag>
+          {navLinks.map((navLink) => (
+            <LinkTag
+              key={navLink.id}
+              tag="link"
+              toHref={navLink.href}
+              variant="navbar"
+              onClick={openNavbarMenu}
+              className="my-6"
+            >
+              {navLink.name}
+            </LinkTag>
+          ))}
         </div>
 
         <StarBG className="grayscale absolute top-0" styles={{}} />
