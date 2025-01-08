@@ -35,7 +35,11 @@ export default function NavbarContent() {
         </Link>
       </div>
       <div className="z-50">
-        <button onClick={openNavbarMenu} className="cursor-pointer">
+        <button
+          onClick={openNavbarMenu}
+          className="cursor-pointer"
+          aria-expanded={!navbarOpen ? "false" : "true"}
+        >
           <Icon
             icon={!navbarOpen ? "ri:menu-3-fill" : "ri:close-large-line"}
             width="30"

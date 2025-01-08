@@ -1,5 +1,6 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState } from "react";
 import clsx from "clsx";
+import { useTimeout } from "usehooks-ts";
 import { NavbarContext } from "./NavbarContent";
 import { LinkTag } from "../UI";
 import { StarBG } from "../shared/StarBG";
@@ -15,10 +16,9 @@ export default function NavbarMenu() {
   const { navbarOpen, openNavbarMenu } = useContext(NavbarContext);
   const [loaded, setLoaded] = useState<boolean>(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setLoaded(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
+  useTimeout(() => {
+    setLoaded(!loaded);
+  }, 100);
 
   const navLinks: NavLinkObjType = [
     { id: 1, name: "TRANG CHỦ", href: "/" },

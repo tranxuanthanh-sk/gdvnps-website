@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 import { StarBG } from "~/components/shared/StarBG";
+import { HeroHeader } from "~/components/views/home";
 
 export const meta: MetaFunction = () => {
   return [
@@ -16,7 +17,9 @@ export default function Index() {
   return (
     <>
       <StarBG />
-      <div className="w-full h-full max-h-screen bg-transparent"></div>
+      <main className="w-full flex items-center justify-center h-screen bg-transparent">
+        <HeroHeader />
+      </main>
     </>
   );
 }
