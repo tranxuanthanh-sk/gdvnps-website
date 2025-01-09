@@ -40,21 +40,49 @@ export default function NavbarMenu() {
           })}
         >
           {navLinks.map((navLink) => (
-            <LinkTag
+            <NavbarMenuLink
               key={navLink.id}
-              tag="link"
               toHref={navLink.href}
-              variant="navbar"
               onClick={openNavbarMenu}
-              className="my-6"
             >
               {navLink.name}
-            </LinkTag>
+            </NavbarMenuLink>
           ))}
         </div>
 
-        <StarBG className="grayscale absolute top-0" styles={{}} />
+        <StarBG className="grayscale absolute top-0" />
       </div>
     </div>
   );
 }
+
+interface NavbarMenuLinkPropsType {
+  children?: React.ReactNode;
+  onClick?: () => void;
+  toHref?: string;
+}
+
+const NavbarMenuLink = ({
+  children,
+  onClick,
+  toHref,
+  ...props
+}: NavbarMenuLinkPropsType) => {
+  console.log("rendered");
+  return (
+    <>
+      {
+        <LinkTag
+          tag="link"
+          toHref={toHref}
+          variant="navbar"
+          onClick={onClick}
+          className="my-6"
+          {...props}
+        >
+          {children}
+        </LinkTag>
+      }
+    </>
+  );
+};

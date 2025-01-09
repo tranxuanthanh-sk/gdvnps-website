@@ -16,9 +16,11 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <>
-      <StarBG />
-      <main className="w-full flex items-center justify-center h-screen bg-transparent">
-        <HeroHeader />
+      <main>
+        <StarBG />
+        <div className="w-full flex items-center justify-center h-[85vh] bg-transparent">
+          <HeroHeader />
+        </div>
       </main>
     </>
   );
