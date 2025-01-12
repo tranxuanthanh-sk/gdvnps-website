@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react";
 import clsx from "clsx";
-import styles from "~/style/UI/LinkTag.module.css";
+// import styles from "~/style/UI/LinkTag.module.css";
 
 interface LinkTagPropsType {
   tag?: "link" | "anchor";
@@ -21,8 +21,9 @@ export default function LinkTag({
   ...props
 }: LinkTagPropsType) {
   const linkTagVariants = clsx(className, {
-    [styles.default]: variant === "default",
-    [styles.navbar]: variant === "navbar",
+    "underline font-sans": variant === "default",
+    "text-slate-300 font-sans font-semibold block w-full text-4xl duration-150 hover:text-orange-400":
+      variant === "navbar",
   });
 
   if (tag === "link") {

@@ -4,7 +4,7 @@ import { useTimeout } from "usehooks-ts";
 import { NavbarContext } from "./NavbarContent";
 import { LinkTag } from "../UI";
 import { StarBG } from "../shared/StarBG";
-import styles from "~/style/NavbarMenu.module.css";
+import styles from "./Navbar.module.scss";
 
 type NavLinkObjType = {
   id: number;

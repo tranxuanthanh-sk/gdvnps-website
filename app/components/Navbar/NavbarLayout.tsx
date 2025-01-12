@@ -1,18 +1,20 @@
 import { useState, useEffect } from "react";
+import clsx from "clsx";
+import styles from "./Navbar.module.scss";
 
 export default function NavbarLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const [navbarOnScroll, setNavbarOnScroll] = useState<string>("");
+  const [navbarOnScroll, setNavbarOnScroll] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
-        setNavbarOnScroll("navbar--active");
+        setNavbarOnScroll(true);
       } else {
-        setNavbarOnScroll("");
+        setNavbarOnScroll(false);
       }
     };
 
@@ -23,7 +25,11 @@ export default function NavbarLayout({
   }, []);
 
   return (
-    <nav className={`navbar ${navbarOnScroll}`}>
+    <nav
+      className={clsx(styles.navbar, {
+        [styles["navbar--active"]]: navbarOnScroll,
+      })}
+    >
       <nav className="flex w-full items-center justify-between">{children}</nav>
     </nav>
   );

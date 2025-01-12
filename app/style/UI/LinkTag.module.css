@@ -1,7 +1,0 @@
-.default {
-  @apply underline font-sans;
-}
-
-.navbar {
-  @apply text-slate-300 font-sans font-semibold block w-full text-4xl duration-150 hover:text-orange-400;
-}
