@@ -3,7 +3,7 @@
 }
 
 .star-bg__obj {
-  @apply absolute rounded-full [animation-duration:40s] [animation-iteration-count:infinite];
+  @apply absolute rounded-full z-40 [animation-duration:40s] [animation-iteration-count:infinite];
 }
 
 .star-bg__obj:nth-child(odd) {

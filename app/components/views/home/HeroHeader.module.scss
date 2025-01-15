@@ -1,0 +1,17 @@
+@keyframes font-animation {
+  0% {
+    @apply text-gray-300;
+  }
+  50% {
+    @apply bg-gradient-to-t from-red-500 via-orange-500 to-yellow-500 inline-block text-transparent bg-clip-text opacity-80;
+  }
+  100% {
+    @apply bg-gradient-to-t from-red-500 via-orange-500 to-yellow-500 inline-block text-transparent bg-clip-text opacity-100;
+  }
+}
+
+.font-hero {
+  @apply text-gray-300;
+  animation: font-animation 6s ease-in-out 1 both;
+  animation-fill-mode: forwards;
+}
