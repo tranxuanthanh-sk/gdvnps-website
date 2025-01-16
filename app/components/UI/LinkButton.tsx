@@ -9,43 +9,37 @@ interface LinkButtonPropsType {
   children?: React.ReactNode;
 }
 
-export default function LinkButton({tag = "link",
+export default function LinkButton({
+  tag = "link",
   toHref,
   variant = "fill",
   className,
   children,
-  ...props} : LinkButtonPropsType) {
+  ...props
+}: LinkButtonPropsType) {
+  const linkButtonVariants = clsx(className, {
+    "no-underline text-slate-200 px-3.5 py-4 inline-block rounded-full bg-gradient-to-br from-red-500 via-orange-500 to-yellow-600":
+      variant === "fill",
+    "no-underline bg-clip-border border-orange-500 border-2 border-transparent text-slate-200 px-3.5 py-4 inline-block rounded-full bg-transparent":
+      variant === "outline",
+  });
 
-    const linkButtonVariants = clsx(className, {
-      "no-underline text-slate-200 px-3.5 py-4 inline-block rounded-full bg-gradient-to-br from-red-500 via-orange-500 to-yellow-600": variant === "fill",
-      "no-underline bg-clip-border border-orange-500 border-2 border-transparent text-slate-200 px-3.5 py-4 inline-block rounded-full bg-transparent":
-        variant === "outline",
-    });
-  
-    switch (tag) {
-      case "link":
-        return (
-          <Link
-            to={`${toHref}`}
-            className={linkButtonVariants}
-            {...props}
-          >
-            {children}
-          </Link>
-        );
-  
-      case "anchor":
-        return (
-          <a
-            href={`${toHref}`}
-            className={linkButtonVariants}
-            {...props}
-          >
-            {children}
-          </a>
-        );
-  
-      default:
-        return null;
-      }
+  switch (tag) {
+    case "link":
+      return (
+        <Link to={`${toHref}`} className={linkButtonVariants} {...props}>
+          {children}
+        </Link>
+      );
+
+    case "anchor":
+      return (
+        <a href={`${toHref}`} className={linkButtonVariants} {...props}>
+          {children}
+        </a>
+      );
+
+    default:
+      return null;
+  }
 }
