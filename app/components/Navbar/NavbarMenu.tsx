@@ -68,12 +68,11 @@ const NavbarMenuLink = ({
   toHref,
   ...props
 }: NavbarMenuLinkPropsType) => {
-  console.log("rendered");
   return (
     <>
       {
         <LinkTag
-          tag="link"
+          tag="navlink"
           toHref={toHref}
           variant="navbar"
           onClick={onClick}

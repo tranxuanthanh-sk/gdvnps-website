@@ -1,5 +1,5 @@
 import { useState, createContext } from "react";
-import { Link } from "@remix-run/react";
+import { NavLink } from "@remix-run/react";
 import { Icon } from "@iconify/react";
 import GDVNPS_Icon from "~/assets/gdvnps-no-bg.svg";
 import NavbarMenu from "./NavbarMenu";
@@ -24,7 +24,7 @@ export default function NavbarContent() {
   return (
     <NavbarContext.Provider value={{ navbarOpen, openNavbarMenu }}>
       <div className="h-fit w-fit z-30">
-        <Link to="/" className="no-underline inline-block">
+        <NavLink to="/" className="no-underline inline-block">
           <img
             src={GDVNPS_Icon}
             alt="GDVNPS's logo"
@@ -32,7 +32,7 @@ export default function NavbarContent() {
             height={58}
             className="pointer-events-none select-none"
           />
-        </Link>
+        </NavLink>
       </div>
       <div className="z-50">
         <button
