@@ -1,35 +1,37 @@
-# GDVNPS Next-Gen Offcial Website Source Code
+# GDVNPS Offcial Website Source Code
 
-- **Language / Ngôn ngữ: [English](README.md) | [Tiếng Việt](README_vi.md)**
+This repository is licensed under the **[MIT License](LICENSE)**.
 
 This is the official repository for GDVNPS website. This repository contains all the source code and assets.
 
+**Note: If you want to clone this repository to create your GDPS website, you can deploy it using a Node.js server or hosting services like **[Vercel](https://vercel.com/)**, **[Netlify](https://www.netlify.com/)**, **[Render](https://render.com/)**, etc., for a simpler setup.**
+
 ## What we use?
 
-- **JS Framework:** [Remix](https://remix.run/)
-- **Styling:** [Tailwind CSS](https://tailwindcss.com/) and custom CSS modules
-- **Build Tool:** [Vite](https://vite.dev/)
-- **Deployment:** [Vercel](https://vercel.com/)
-- **Others:** [Prettier](https://prettier.io/), [ESLint](https://eslint.org/), [Husky](https://typicode.github.io/husky/)
+- **JS Framework:** **[Remix](https://remix.run/)** with **[TypeScript](https://www.typescriptlang.org/)**
+- **Styling:** **[Tailwind CSS](https://tailwindcss.com/)**, and **CSS/SCSS modules**
+- **Build Tool:** **[Vite](https://vite.dev/)**
+- **Deployment:** **[Vercel](https://vercel.com/)**
+- **Others:** **[usehooks-ts](https://usehooks-ts.com/)**, **[Prettier](https://prettier.io/)**, **[ESLint](https://eslint.org/)**, **[Husky](https://typicode.github.io/husky/)**, **[lint-staged](https://github.com/lint-staged/lint-staged)**, **[CommitLint](commitlint.js.org)**
 
-## Development
+## Development (for make your own GDPS website)
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/)
-- [npm](https://www.npmjs.com/)
+- **[Node.js](https://nodejs.org/)** **_(>= 20)_**
+- **[npm](https://www.npmjs.com/)**
 
 ### Installation
 
 1. Install dependencies:
 
-   ```bash
+   ```sh
    npm i  # or `npm install` if you want
    ```
 
 2. Run the development server:
 
-   ```bash
+   ```sh
    npm run dev
    ```
 
@@ -39,25 +41,14 @@ This is the official repository for GDVNPS website. This repository contains all
 
 #### Husky, lint-staged, CommitLint (optional)
 
-This project uses **[Husky](https://typicode.github.io/husky/)**, **[lint-staged](https://github.com/lint-staged/lint-staged)** and **[CommitLint](commitlint.js.org)** to enforce code formatting and linting before commits. It helps maintain a consistent and clean codebase by running pre-commit hooks. However, using Husky, lint-staged and CommitLint is optional.
-
-##### Modifying Husky Scripts
-
-If you want to customize the pre-commit behavior:
-
-1. Open the `.husky/pre-commit` file.
-2. Modify the script as needed (e.g., update the tools or commands being run).
-
-##### Skipping Husky Hooks
-
-To skip the pre-commit hook (if necessary), you can use the following command:
-
-```bash
-git commit --no-verify
-```
+This project uses **[Husky](https://typicode.github.io/husky/)**, **[lint-staged](https://github.com/lint-staged/lint-staged)**, and **[CommitLint](https://commitlint.js.org)** to enforce code formatting and linting before commits. These tools help maintain a consistent and clean codebase by running pre-commit hooks. However, using **[Husky](https://typicode.github.io/husky/)**, **[lint-staged](https://github.com/lint-staged/lint-staged)**, and **[CommitLint](https://commitlint.js.org)** is **optional**, so you can remove them if desired.
 
 #### Documentation
 
-- [React Docs](https://react.dev/)
-- [Remix Docs](https://remix.run/docs/)
-- [Tailwind CSS Docs](https://tailwindcss.com/docs/)
+Below are some useful resources to assist you during development:
+
+- **[MDN Web Docs](https://developer.mozilla.org/)**
+- **[TypeScript Docs](https://www.typescriptlang.org/docs/)**
+- **[React Docs](https://react.dev/)**
+- **[Remix Docs](https://remix.run/docs/)**
+- **[Tailwind CSS Docs](https://tailwindcss.com/docs/)**
