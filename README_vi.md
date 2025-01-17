@@ -39,7 +39,7 @@
 
 #### Husky, lint-staged, CommitLint (tùy ý)
 
-Dự án này sử dụng **[Husky](https://typicode.github.io/husky/)**, **[lint-staged](https://github.com/lint-staged/lint-staged)** và **[CommitLint](commitlint.js.org)** để thực thi định dạng mã và tìm lỗi mã nguồn trước khi xác nhận. Nó giúp duy trì một cơ sở mã nhất quán và rõ ràng bằng cách chạy các hook pre-commit. Tuy nhiên, việc sử dụng Husky là tùy ý.
+Dự án này sử dụng **[Husky](https://typicode.github.io/husky/)**, **[lint-staged](https://github.com/lint-staged/lint-staged)** và **[CommitLint](commitlint.js.org)** để thực thi định dạng mã và tìm lỗi mã nguồn trước khi xác nhận. Nó giúp duy trì một cơ sở mã nhất quán và rõ ràng bằng cách chạy các hook pre-commit. Tuy nhiên, việc sử dụng Husky, lint-staged và CommitLint là tùy ý.
 
 ##### Tùy chỉnh Husky Scripts
 
@@ -58,5 +58,6 @@ git commit --no-verify
 
 #### Tài liệu cần thiết
 
+- [React Docs](https://react.dev/)
 - [Remix Docs](https://remix.run/docs/)
 - [Tailwind CSS Docs](https://tailwindcss.com/docs/)
