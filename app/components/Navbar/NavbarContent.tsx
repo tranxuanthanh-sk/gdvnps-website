@@ -1,8 +1,8 @@
-import { useState, createContext } from "react";
-import { NavLink } from "@remix-run/react";
-import { Icon } from "@iconify/react";
-import GDVNPS_Icon from "~/assets/gdvnps-no-bg.svg";
-import NavbarMenu from "./NavbarMenu";
+import { useState, createContext } from 'react';
+import { NavLink } from '@remix-run/react';
+import { Icon } from '@iconify/react';
+import GDVNPS_Icon from '~/assets/gdvnps-no-bg.svg';
+import NavbarMenu from './NavbarMenu';
 
 interface NavbarContextType {
   navbarOpen: boolean;
@@ -23,8 +23,8 @@ export default function NavbarContent() {
 
   return (
     <NavbarContext.Provider value={{ navbarOpen, openNavbarMenu }}>
-      <div className="h-fit w-fit z-30">
-        <NavLink to="/" className="no-underline inline-block">
+      <div className="z-30 h-fit w-fit">
+        <NavLink to="/" className="inline-block no-underline">
           <img
             src={GDVNPS_Icon}
             alt="GDVNPS's logo"
@@ -38,10 +38,10 @@ export default function NavbarContent() {
         <button
           onClick={openNavbarMenu}
           className="cursor-pointer"
-          aria-expanded={!navbarOpen ? "false" : "true"}
+          aria-expanded={!navbarOpen ? 'false' : 'true'}
         >
           <Icon
-            icon={!navbarOpen ? "ri:menu-3-fill" : "ri:close-large-line"}
+            icon={!navbarOpen ? 'ri:menu-3-fill' : 'ri:close-large-line'}
             width="30"
             height="30"
             className="fill-slate-200"

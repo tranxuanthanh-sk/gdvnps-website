@@ -1,10 +1,10 @@
-import { useContext, useState } from "react";
-import clsx from "clsx";
-import { useTimeout } from "usehooks-ts";
-import { NavbarContext } from "./NavbarContent";
-import { LinkTag } from "../UI";
-import { StarBG } from "../shared/StarBG";
-import styles from "./Navbar.module.scss";
+import { useContext, useState } from 'react';
+import clsx from 'clsx';
+import { useTimeout } from 'usehooks-ts';
+import { NavbarContext } from './NavbarContent';
+import { LinkTag } from '../UI';
+import { StarBG } from '../shared/StarBG';
+import styles from './Navbar.module.scss';
 
 type NavLinkObjType = {
   id: number;
@@ -21,22 +21,22 @@ export default function NavbarMenu() {
   }, 100);
 
   const navLinks: NavLinkObjType = [
-    { id: 1, name: "TRANG CHỦ", href: "/" },
-    { id: 2, name: "TẢI XUỐNG", href: "/download" },
-    { id: 3, name: "FAQ", href: "faq" },
+    { id: 1, name: 'TRANG CHỦ', href: '/' },
+    { id: 2, name: 'TẢI XUỐNG', href: '/download' },
+    { id: 3, name: 'FAQ', href: 'faq' },
   ];
 
   return (
     <div
       className={clsx(styles.navbar__menu, {
-        [styles["navbar__menu--loaded"]]: loaded,
-        [styles["navbar__menu--opened"]]: navbarOpen,
+        [styles['navbar__menu--loaded']]: loaded,
+        [styles['navbar__menu--opened']]: navbarOpen,
       })}
     >
-      <div className="w-full absolute h-full top-0 left-0 flex">
+      <div className="absolute left-0 top-0 flex h-full w-full">
         <div
-          className={clsx(styles["navbar__menu-wrap"], {
-            [styles["navbar__menu-wrap--opened"]]: navbarOpen,
+          className={clsx(styles['navbar__menu-wrap'], {
+            [styles['navbar__menu-wrap--opened']]: navbarOpen,
           })}
         >
           {navLinks.map((navLink) => (
@@ -50,7 +50,7 @@ export default function NavbarMenu() {
           ))}
         </div>
 
-        <StarBG className="grayscale absolute top-0" />
+        <StarBG className="absolute top-0 grayscale" />
       </div>
     </div>
   );

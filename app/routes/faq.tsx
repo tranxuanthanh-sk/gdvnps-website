@@ -1,11 +1,11 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from '@remix-run/node';
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "FAQ | GDVNPS" },
+    { title: 'FAQ | GDVNPS' },
     {
-      name: "description",
-      content: "Trả lời các câu hỏi thường gặp",
+      name: 'description',
+      content: 'Trả lời các câu hỏi thường gặp',
     },
   ];
 };

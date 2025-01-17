@@ -1,45 +1,45 @@
-import { Link } from "@remix-run/react";
-import clsx from "clsx";
-import styles from "./styles/LinkButton.module.scss";
+import { Link } from '@remix-run/react';
+import clsx from 'clsx';
+import styles from './styles/LinkButton.module.scss';
 
 interface LinkButtonPropsType {
-  tag?: "link" | "anchor";
+  tag?: 'link' | 'anchor';
   toHref?: string;
-  variant?: "fill" | "outline";
+  variant?: 'fill' | 'outline';
   className?: string;
   children?: React.ReactNode;
 }
 
 export default function LinkButton({
-  tag = "link",
+  tag = 'link',
   toHref,
-  variant = "fill",
+  variant = 'fill',
   className,
   children,
   ...props
 }: LinkButtonPropsType) {
   const linkButtonVariants = clsx(className, {
-    [styles.fill]: variant === "fill",
-    [styles.outline]: variant === "outline",
+    [styles.fill]: variant === 'fill',
+    [styles.outline]: variant === 'outline',
   });
 
   switch (tag) {
-    case "link":
+    case 'link':
       return (
         <Link
           to={`${toHref}`}
-          className={`${clsx(styles["button-link"])} ${linkButtonVariants}`}
+          className={`${clsx(styles['button-link'])} ${linkButtonVariants}`}
           {...props}
         >
           {children}
         </Link>
       );
 
-    case "anchor":
+    case 'anchor':
       return (
         <a
           href={`${toHref}`}
-          className={`${clsx(styles["button-link"])} ${linkButtonVariants}`}
+          className={`${clsx(styles['button-link'])} ${linkButtonVariants}`}
           {...props}
         >
           {children}

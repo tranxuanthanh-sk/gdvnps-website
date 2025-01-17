@@ -1,5 +1,5 @@
-import NavbarLayout from "./NavbarLayout";
-import NavbarContent from "./NavbarContent";
+import NavbarLayout from './NavbarLayout';
+import NavbarContent from './NavbarContent';
 
 export function Navbar() {
   return (

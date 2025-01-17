@@ -1,3 +1,5 @@
-import HeroHeader from "./HeroHeader";
+import HeroHeader from './HeroHeader';
+import AboutView from './AboutView';
+import FeaturesView from './FeaturesView';
 
-export { HeroHeader };
+export { HeroHeader, AboutView, FeaturesView };

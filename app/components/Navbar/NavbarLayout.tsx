@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import clsx from "clsx";
-import styles from "./Navbar.module.scss";
+import { useState, useEffect } from 'react';
+import clsx from 'clsx';
+import styles from './Navbar.module.scss';
 
 export default function NavbarLayout({
   children,
@@ -18,16 +18,16 @@ export default function NavbarLayout({
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
     <nav
       className={clsx(styles.navbar, {
-        [styles["navbar--active"]]: navbarOnScroll,
+        [styles['navbar--active']]: navbarOnScroll,
       })}
     >
       <nav className="flex w-full items-center justify-between">{children}</nav>

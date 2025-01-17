@@ -1,33 +1,33 @@
-import { Link, NavLink } from "@remix-run/react";
-import clsx from "clsx";
-import styles from "./styles/LinkTag.module.scss";
+import { Link, NavLink } from '@remix-run/react';
+import clsx from 'clsx';
+import styles from './styles/LinkTag.module.scss';
 
 interface LinkTagPropsType {
-  tag?: "link" | "anchor" | "navlink";
+  tag?: 'link' | 'anchor' | 'navlink';
   toHref?: string;
-  variant?: "default" | "navbar" | "normal";
+  variant?: 'default' | 'navbar' | 'normal';
   className?: string;
   onClick?: () => void;
   children?: React.ReactNode;
 }
 
 export default function LinkTag({
-  tag = "link",
+  tag = 'link',
   toHref,
-  variant = "default",
+  variant = 'default',
   className,
   onClick,
   children,
   ...props
 }: LinkTagPropsType) {
   const linkTagVariants = clsx(className, {
-    [styles.default]: variant === "default",
-    [styles.navbar]: variant === "navbar",
-    [styles.normal]: variant === "normal",
+    [styles.default]: variant === 'default',
+    [styles.navbar]: variant === 'navbar',
+    [styles.normal]: variant === 'normal',
   });
 
   switch (tag) {
-    case "link":
+    case 'link':
       return (
         <Link
           to={`${toHref}`}
@@ -39,7 +39,7 @@ export default function LinkTag({
         </Link>
       );
 
-    case "anchor":
+    case 'anchor':
       return (
         <a
           href={`${toHref}`}
@@ -51,7 +51,7 @@ export default function LinkTag({
         </a>
       );
 
-    case "navlink":
+    case 'navlink':
       return (
         <NavLink
           to={`${toHref}`}

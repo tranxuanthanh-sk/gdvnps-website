@@ -1,9 +1,9 @@
 .star-bg {
-  @apply fixed w-screen h-screen bg-transparent;
+  @apply absolute left-0 top-0 h-screen w-full overflow-y-hidden bg-transparent;
 }
 
 .star-bg__obj {
-  @apply absolute rounded-full z-40 [animation-duration:40s] [animation-iteration-count:infinite];
+  @apply absolute z-40 rounded-full [animation-duration:40s] [animation-iteration-count:infinite];
 }
 
 .star-bg__obj:nth-child(odd) {
@@ -15,7 +15,7 @@
 }
 
 .star-bg__obj:nth-child(1) {
-  @apply opacity-50 [animation-name:star-bg-animation1] [animation-delay:-0.2s] [transform:translate3d(90vw,79vh,22px)];
+  @apply opacity-50 [animation-delay:-0.2s] [animation-name:star-bg-animation1] [transform:translate3d(90vw,79vh,22px)];
 }
 
 @keyframes star-bg-animation1 {
@@ -29,7 +29,7 @@
 }
 
 .star-bg__obj:nth-child(2) {
-  @apply opacity-45 [animation-name:star-bg-animation2] [animation-delay:-0.6s] [transform:translate3d(80vw,21vh,30px)];
+  @apply opacity-45 [animation-delay:-0.6s] [animation-name:star-bg-animation2] [transform:translate3d(80vw,21vh,30px)];
 }
 
 @keyframes star-bg-animation2 {
@@ -43,7 +43,7 @@
 }
 
 .star-bg__obj:nth-child(3) {
-  @apply opacity-45 [animation-name:star-bg-animation3] [animation-delay:-0.4s] [transform:translate3d(11vw,50vh,90px)];
+  @apply opacity-45 [animation-delay:-0.4s] [animation-name:star-bg-animation3] [transform:translate3d(11vw,50vh,90px)];
 }
 
 @keyframes star-bg-animation3 {
@@ -57,7 +57,7 @@
 }
 
 .star-bg__obj:nth-child(4) {
-  @apply opacity-45 [animation-name:star-bg-animation4] [animation-delay:-0.9s] [transform:translate3d(70vw,10vh,58px)];
+  @apply opacity-45 [animation-delay:-0.9s] [animation-name:star-bg-animation4] [transform:translate3d(70vw,10vh,58px)];
 }
 
 @keyframes star-bg-animation4 {
@@ -71,7 +71,7 @@
 }
 
 .star-bg__obj:nth-child(5) {
-  @apply opacity-45 [animation-name:star-bg-animation5] [animation-delay:-0.1s] [transform:translate3d(55vw,50vh,30px)];
+  @apply opacity-45 [animation-delay:-0.1s] [animation-name:star-bg-animation5] [transform:translate3d(55vw,50vh,30px)];
 }
 
 @keyframes star-bg-animation5 {
@@ -85,7 +85,7 @@
 }
 
 .star-bg__obj:nth-child(6) {
-  @apply opacity-45 [animation-name:star-bg-animation6] [animation-delay:-0.8s] [transform:translate3d(5vw,20vh,60px)];
+  @apply opacity-45 [animation-delay:-0.8s] [animation-name:star-bg-animation6] [transform:translate3d(5vw,20vh,60px)];
 }
 
 @keyframes star-bg-animation6 {
@@ -99,7 +99,7 @@
 }
 
 .star-bg__obj:nth-child(7) {
-  @apply opacity-45 [animation-name:star-bg-animation7] [animation-delay:-0.3s] [transform:translate3d(40vw,70vh,20px)];
+  @apply opacity-45 [animation-delay:-0.3s] [animation-name:star-bg-animation7] [transform:translate3d(40vw,70vh,20px)];
 }
 
 @keyframes star-bg-animation7 {
@@ -113,7 +113,7 @@
 }
 
 .star-bg__obj:nth-child(8) {
-  @apply opacity-45 [animation-name:star-bg-animation8] [animation-delay:-0.7s] [transform:translate3d(10vw,15vh,50px)];
+  @apply opacity-45 [animation-delay:-0.7s] [animation-name:star-bg-animation8] [transform:translate3d(10vw,15vh,50px)];
 }
 
 @keyframes star-bg-animation8 {
@@ -127,7 +127,7 @@
 }
 
 .star-bg__obj:nth-child(9) {
-  @apply opacity-45 [animation-name:star-bg-animation9] [animation-delay:-0.5s] [transform:translate3d(30vw,45vh,70px)];
+  @apply opacity-45 [animation-delay:-0.5s] [animation-name:star-bg-animation9] [transform:translate3d(30vw,45vh,70px)];
 }
 
 @keyframes star-bg-animation9 {
@@ -141,7 +141,7 @@
 }
 
 .star-bg__obj:nth-child(10) {
-  @apply opacity-45 [animation-name:star-bg-animation10] [animation-delay:-0.2s] [transform:translate3d(25vw,30vh,10px)];
+  @apply opacity-45 [animation-delay:-0.2s] [animation-name:star-bg-animation10] [transform:translate3d(25vw,30vh,10px)];
 }
 
 @keyframes star-bg-animation10 {
@@ -155,7 +155,7 @@
 }
 
 .star-bg__obj:nth-child(11) {
-  @apply opacity-45 [animation-name:star-bg-animation11] [animation-delay:-0.4s] [transform:translate3d(50vw,90vh,40px)];
+  @apply opacity-45 [animation-delay:-0.4s] [animation-name:star-bg-animation11] [transform:translate3d(50vw,90vh,40px)];
 }
 
 @keyframes star-bg-animation11 {
@@ -169,7 +169,7 @@
 }
 
 .star-bg__obj:nth-child(12) {
-  @apply opacity-45 [animation-name:star-bg-animation12] [animation-delay:-0.6s] [transform:translate3d(15vw,25vh,30px)];
+  @apply opacity-45 [animation-delay:-0.6s] [animation-name:star-bg-animation12] [transform:translate3d(15vw,25vh,30px)];
 }
 
 @keyframes star-bg-animation12 {
@@ -183,7 +183,7 @@
 }
 
 .star-bg__obj:nth-child(13) {
-  @apply opacity-45 [animation-name:star-bg-animation13] [animation-delay:-0.1s] [transform:translate3d(65vw,40vh,50px)];
+  @apply opacity-45 [animation-delay:-0.1s] [animation-name:star-bg-animation13] [transform:translate3d(65vw,40vh,50px)];
 }
 
 @keyframes star-bg-animation13 {
@@ -197,7 +197,7 @@
 }
 
 .star-bg__obj:nth-child(14) {
-  @apply opacity-45 [animation-name:star-bg-animation14] [animation-delay:-0.3s] [transform:translate3d(35vw,75vh,20px)];
+  @apply opacity-45 [animation-delay:-0.3s] [animation-name:star-bg-animation14] [transform:translate3d(35vw,75vh,20px)];
 }
 
 @keyframes star-bg-animation14 {
@@ -211,7 +211,7 @@
 }
 
 .star-bg__obj:nth-child(15) {
-  @apply opacity-45 [animation-name:star-bg-animation15] [animation-delay:-0.7s] [transform:translate3d(75vw,25vh,60px)];
+  @apply opacity-45 [animation-delay:-0.7s] [animation-name:star-bg-animation15] [transform:translate3d(75vw,25vh,60px)];
 }
 
 @keyframes star-bg-animation15 {
@@ -225,7 +225,7 @@
 }
 
 .star-bg__obj:nth-child(16) {
-  @apply opacity-45 [animation-name:star-bg-animation16] [animation-delay:-0.9s] [transform:translate3d(20vw,55vh,30px)];
+  @apply opacity-45 [animation-delay:-0.9s] [animation-name:star-bg-animation16] [transform:translate3d(20vw,55vh,30px)];
 }
 
 @keyframes star-bg-animation16 {
@@ -239,7 +239,7 @@
 }
 
 .star-bg__obj:nth-child(17) {
-  @apply opacity-45 [animation-name:star-bg-animation17] [animation-delay:-0.5s] [transform:translate3d(60vw,85vh,40px)];
+  @apply opacity-45 [animation-delay:-0.5s] [animation-name:star-bg-animation17] [transform:translate3d(60vw,85vh,40px)];
 }
 
 @keyframes star-bg-animation17 {
@@ -253,7 +253,7 @@
 }
 
 .star-bg__obj:nth-child(18) {
-  @apply opacity-45 [animation-name:star-bg-animation18] [animation-delay:-0.2s] [transform:translate3d(45vw,35vh,20px)];
+  @apply opacity-45 [animation-delay:-0.2s] [animation-name:star-bg-animation18] [transform:translate3d(45vw,35vh,20px)];
 }
 
 @keyframes star-bg-animation18 {
@@ -267,7 +267,7 @@
 }
 
 .star-bg__obj:nth-child(19) {
-  @apply opacity-45 [animation-name:star-bg-animation19] [animation-delay:-0.4s] [transform:translate3d(30vw,15vh,50px)];
+  @apply opacity-45 [animation-delay:-0.4s] [animation-name:star-bg-animation19] [transform:translate3d(30vw,15vh,50px)];
 }
 
 @keyframes star-bg-animation19 {
@@ -281,7 +281,7 @@
 }
 
 .star-bg__obj:nth-child(20) {
-  @apply opacity-45 [animation-name:star-bg-animation20] [animation-delay:-0.8s] [transform:translate3d(5vw,90vh,30px)];
+  @apply opacity-45 [animation-delay:-0.8s] [animation-name:star-bg-animation20] [transform:translate3d(5vw,90vh,30px)];
 }
 
 @keyframes star-bg-animation20 {
