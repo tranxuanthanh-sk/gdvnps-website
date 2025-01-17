@@ -21,7 +21,7 @@ export default function LinkTag({
   ...props
 }: LinkTagPropsType) {
   const linkTagVariants = clsx(className, {
-    "underline font-sans": variant === "default",
+    [styles.default]: variant === "default",
     [styles.navbar]: variant === "navbar",
     [styles.normal]: variant === "normal",
   });
