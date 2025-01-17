@@ -1,6 +1,6 @@
 import { Link, NavLink } from "@remix-run/react";
 import clsx from "clsx";
-// import styles from "~/style/UI/LinkTag.module.css";
+import styles from "./styles/LinkTag.module.scss";
 
 interface LinkTagPropsType {
   tag?: "link" | "anchor" | "navlink";
@@ -22,8 +22,8 @@ export default function LinkTag({
 }: LinkTagPropsType) {
   const linkTagVariants = clsx(className, {
     "underline font-sans": variant === "default",
-    "text-slate-300 font-sans font-semibold block w-full text-4xl duration-150 hover:text-orange-400":
-      variant === "navbar",
+    [styles.navbar]: variant === "navbar",
+    [styles.normal]: variant === "normal",
   });
 
   switch (tag) {
@@ -31,7 +31,7 @@ export default function LinkTag({
       return (
         <Link
           to={`${toHref}`}
-          className={linkTagVariants}
+          className={`${clsx(styles.link)} ${linkTagVariants}`}
           onClick={onClick}
           {...props}
         >
@@ -43,7 +43,7 @@ export default function LinkTag({
       return (
         <a
           href={`${toHref}`}
-          className={linkTagVariants}
+          className={`${clsx(styles.link)} ${linkTagVariants}`}
           onClick={onClick}
           {...props}
         >
@@ -55,7 +55,7 @@ export default function LinkTag({
       return (
         <NavLink
           to={`${toHref}`}
-          className={linkTagVariants}
+          className={`${clsx(styles.link)} ${linkTagVariants}`}
           onClick={onClick}
           {...props}
         >

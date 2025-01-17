@@ -37,9 +37,9 @@ This is the official repository for GDVNPS website. This repository contains all
 
 ### Notes
 
-#### Husky (optional)
+#### Husky, lint-staged, CommitLint (optional)
 
-This project uses **[Husky](https://typicode.github.io/husky/)** to enforce code formatting and linting before commits. It helps maintain a consistent and clean codebase by running pre-commit hooks. However, using Husky is optional.
+This project uses **[Husky](https://typicode.github.io/husky/)**, **[lint-staged](https://github.com/lint-staged/lint-staged)** and **[CommitLint](commitlint.js.org)** to enforce code formatting and linting before commits. It helps maintain a consistent and clean codebase by running pre-commit hooks. However, using Husky is optional.
 
 ##### Modifying Husky Scripts
 
