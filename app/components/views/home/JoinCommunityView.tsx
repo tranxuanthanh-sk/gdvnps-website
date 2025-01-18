@@ -23,7 +23,7 @@ export default function JoinCommunityView() {
         </LinkButton>
       </div>
 
-      <div className="mt-3.5 rounded-lg lg:mt-0">
+      <div className="mt-3.5 hidden rounded-lg lg:mt-0 lg:block">
         <div className="h-fit w-fit">
           <iframe
             title="Discord Community Widget"
