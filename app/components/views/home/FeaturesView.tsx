@@ -62,7 +62,7 @@ export default function FeaturesView() {
           </h1>
           <p className="text-slate-300/98 leading-[1.8] text-slate-300">
             GDVNPS được phát hành trên các nền tảng như <strong>Windows</strong>
-            , <strong>Andriod</strong> và <strong>iOS</strong>. Kèm với đó là có
+            , <strong>Android</strong> và <strong>iOS</strong>. Kèm với đó là có
             hỗ trợ <strong>Geode</strong> tốt.
           </p>
         </BoxGrid>

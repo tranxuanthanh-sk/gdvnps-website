@@ -5,9 +5,9 @@ export default function FeelInterested() {
   return (
     <IntroduceViewLayout className="flex flex-col items-center justify-center">
       <ViewTitle className="text-center">Cảm thấy háo hức?</ViewTitle>
-      <p className="mb-4 px-3.5 text-center text-base font-normal leading-[1.95] text-slate-300">
-        Hãy <span className="text-orange-400">tải xuống GDVNPS</span> ngay bây
-        giờ
+      <p className="my-4 px-3.5 text-center text-base font-normal leading-[1.95] text-slate-300">
+        Nếu muốn trải nghiệm, hãy{' '}
+        <span className="text-orange-400">tải xuống GDVNPS</span> ngay bây giờ!
       </p>
       <div>
         <LinkButton

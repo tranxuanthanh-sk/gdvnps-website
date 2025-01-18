@@ -6,7 +6,7 @@ export default function HeroHeader() {
   return (
     <div className="mx-auto flex flex-col gap-5 px-4 text-center font-sans sm:max-w-screen-md">
       <div className={clsx(styles['font-hero'])}>
-        <h1 className="text-4xl font-bold md:text-5xl lg:text-6xl">
+        <h1 className="text-3xl font-bold md:text-5xl lg:text-6xl">
           Chào mừng đã đến với
         </h1>
         <h1 className="mt-0.5 text-6xl font-bold md:text-7xl lg:text-[4.85rem]">

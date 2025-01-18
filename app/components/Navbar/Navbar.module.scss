@@ -1,7 +1,7 @@
 .navbar {
   @apply fixed z-50 flex h-24 w-full items-center justify-center border-b border-transparent bg-transparent px-6 duration-300 lg:px-20;
   &--active {
-    @apply border-gray-700 bg-[#020912];
+    @apply border-gray-800 bg-[#020912]/90;
   }
 }
 
