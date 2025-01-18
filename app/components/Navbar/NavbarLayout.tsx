@@ -30,7 +30,9 @@ export default function NavbarLayout({
         [styles['navbar--active']]: navbarOnScroll,
       })}
     >
-      <nav className="flex w-full items-center justify-between">{children}</nav>
+      <nav className="flex w-full max-w-screen-xl items-center justify-between">
+        {children}
+      </nav>
     </nav>
   );
 }

@@ -24,18 +24,18 @@ export default function Index() {
     <>
       <main>
         <StarBG />
-        <div className="flex h-[89.5vh] w-full items-center justify-center bg-transparent">
+        <div className="flex h-[89.5vh] w-full items-center justify-center bg-transparent xl:max-h-[880px]">
           <HeroHeader />
         </div>
-        <div className="z-40 rounded-s-3xl border-t border-t-[#2f333d] bg-gradient-to-t from-[#0c0f19]/0 to-[#0c0f19] py-10">
-          <div className="m-1 mt-36 gap-3.5 px-6 lg:m-20 xl:grid xl:justify-center">
-            <AboutView />
-            <FeaturesView />
-            <JoinCommunityView />
-            <FeelInterested />
-          </div>
-        </div>
       </main>
+      <div className="z-40 flex items-center justify-center rounded-s-3xl border-t border-t-[#2f333d] bg-gradient-to-t from-[#0c0f19]/0 to-[#0c0f19] py-10">
+        <div className="m-1 mt-36 flex max-w-screen-xl flex-col items-center justify-center gap-4 px-6 lg:m-20">
+          <AboutView />
+          <FeaturesView />
+          <JoinCommunityView />
+          <FeelInterested />
+        </div>
+      </div>
     </>
   );
 }

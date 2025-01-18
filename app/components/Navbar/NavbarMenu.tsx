@@ -33,7 +33,7 @@ export default function NavbarMenu() {
         [styles['navbar__menu--opened']]: navbarOpen,
       })}
     >
-      <div className="absolute left-0 top-0 flex h-full w-full">
+      <div className="absolute left-0 top-0 flex h-full w-full max-w-screen-xl">
         <div
           className={clsx(styles['navbar__menu-wrap'], {
             [styles['navbar__menu-wrap--opened']]: navbarOpen,
