@@ -4,5 +4,9 @@
 
 html,
 body {
-  @apply bg-[#020913];
+  @apply cursor-default bg-[#020913];
+}
+
+::selection {
+  @apply bg-yellow-500/80 text-slate-200;
 }

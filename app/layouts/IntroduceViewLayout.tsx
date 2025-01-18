@@ -5,5 +5,5 @@ export default function IntroduceViewLayout({
   children: React.ReactNode;
   className?: string;
 }) {
-  return <div className={`my-40 w-full ${className}`}>{children}</div>;
+  return <section className={`my-40 w-full ${className}`}>{children}</section>;
 }

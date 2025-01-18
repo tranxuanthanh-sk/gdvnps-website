@@ -1,5 +1,5 @@
 .star-bg {
-  @apply absolute left-0 top-0 h-screen w-full overflow-y-hidden bg-transparent;
+  @apply absolute left-0 top-0 h-[89.5vh] w-full overflow-y-hidden bg-transparent;
 }
 
 .star-bg__obj {

@@ -15,11 +15,14 @@ export default function HeroHeader() {
       </div>
       <p
         style={{ wordWrap: 'break-word' }}
-        className="text-base font-normal leading-[1.85] tracking-wide text-slate-300/90 lg:text-lg"
+        className="z-30 text-base font-normal leading-[1.85] tracking-wide text-slate-300/90 lg:text-lg"
       >
         Được lập ra vào 2024, GDVNPS là máy chủ Geometry Dash Private Server
         dành cho{' '}
-        <strong>cộng đồng người chơi Geometry Dash tại Việt Nam</strong>
+        <strong>
+          cộng đồng người chơi Geometry Dash{' '}
+          <span className="text-orange-400">tại Việt Nam</span>
+        </strong>
       </p>
       <div className="z-30 flex flex-row items-center justify-center gap-5">
         <LinkButton

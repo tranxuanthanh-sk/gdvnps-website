@@ -1,6 +1,12 @@
 import type { MetaFunction } from '@remix-run/node';
 import { StarBG } from '~/components/shared/StarBG';
-import { HeroHeader, AboutView, FeaturesView } from '~/components/views/home';
+import {
+  HeroHeader,
+  AboutView,
+  FeaturesView,
+  JoinCommunityView,
+  FeelInterested,
+} from '~/components/views/home';
 
 export const meta: MetaFunction = () => {
   return [
@@ -22,9 +28,11 @@ export default function Index() {
           <HeroHeader />
         </div>
         <div className="z-40 rounded-3xl border-t border-t-[#2f333d] bg-gradient-to-t from-[#0c0f19]/0 to-[#0c0f19] py-10">
-          <div className="m-16 mt-36 gap-3.5 px-6 lg:m-20 xl:grid xl:justify-center">
+          <div className="m-1 mt-36 gap-3.5 px-6 lg:m-20 xl:grid xl:justify-center">
             <AboutView />
             <FeaturesView />
+            <JoinCommunityView />
+            <FeelInterested />
           </div>
         </div>
       </main>
