@@ -1,7 +1,7 @@
 .navbar {
   @apply fixed z-50 flex h-24 w-full items-center justify-center border-b border-transparent bg-transparent px-6 duration-300 lg:px-20;
   &--active {
-    @apply border-gray-800 bg-[#020912]/90;
+    @apply border-gray-800 bg-[#020912]/[98];
   }
 }
 
@@ -57,7 +57,7 @@
 }
 
 .navbar__menu-wrap {
-  @apply mx-7 flex w-fit flex-col items-center justify-center bg-transparent md:mx-20 lg:mx-44;
+  @apply mx-7 flex w-fit max-w-screen-xl flex-col items-center justify-center gap-4 bg-transparent md:mx-20 lg:mx-44;
   &--opened {
     -webkit-animation: menu-open 1.1s cubic-bezier(0.23, 1, 0.32, 1) both;
     animation: menu-open 1.1s cubic-bezier(0.23, 1, 0.32, 1) both;

@@ -22,7 +22,7 @@ export default function Image({
       alt={alt}
       width={width}
       height={height}
-      className={`rounded-xl ${className}`}
+      className={`pointer-events-none rounded-xl ${className}`}
       loading={loading}
       {...props}
     />

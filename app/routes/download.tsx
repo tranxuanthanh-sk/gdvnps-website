@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import type { MetaFunction } from '@remix-run/node';
+import { SupportOS } from '~/components/views/download';
 
 export const meta: MetaFunction = () => {
   return [
@@ -37,16 +38,21 @@ export default function Download() {
             Tải xuống
           </h1>
           {release ? (
-            <p className="z-30 text-base font-normal leading-[1.85] tracking-wide text-slate-300/90 lg:text-lg">
+            <p className="z-30 text-center text-base font-normal leading-[1.85] tracking-wide text-slate-300/90 lg:text-lg">
               Phiên bản: <strong>{release.tag_name}</strong>
             </p>
           ) : (
-            <p className="z-30 text-base font-normal leading-[1.85] tracking-wide text-slate-300/90 lg:text-lg">
+            <p className="z-30 text-center text-base font-normal leading-[1.85] tracking-wide text-slate-300/90 lg:text-lg">
               Phiên bản: Đang kiểm tra...
             </p>
           )}
         </div>
       </main>
+      <div className="z-40 flex items-center justify-center border-t border-t-[#2f333d] bg-gradient-to-t from-[#0c0f19]/0 to-[#0c0f19] py-10">
+        <div className="m-1 mt-36 flex max-w-screen-xl flex-col items-center justify-center gap-4 px-6 lg:m-20">
+          <SupportOS />
+        </div>
+      </div>
     </>
   );
 }

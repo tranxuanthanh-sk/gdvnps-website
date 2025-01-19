@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { useTimeout } from 'usehooks-ts';
 import { NavbarContext } from './NavbarContent';
 import { LinkTag } from '../UI';
-import { StarBG } from '../shared/StarBG';
+import { StarBG } from '../StarBG';
 import styles from './Navbar.module.scss';
 
 type NavLinkObjType = {
@@ -21,9 +21,14 @@ export default function NavbarMenu() {
   }, 100);
 
   const navLinks: NavLinkObjType = [
-    { id: 1, name: 'TRANG CHỦ', href: '/' },
-    { id: 2, name: 'TẢI XUỐNG', href: '/download' },
-    { id: 3, name: 'FAQ', href: 'faq' },
+    { id: 1, name: 'trang chủ', href: '/' },
+    { id: 2, name: 'tải xuống', href: '/download' },
+    { id: 3, name: 'faq', href: 'faq' },
+    {
+      id: 4,
+      name: 'dashboard',
+      href: 'https://gdvnps.ps.fhgdps.com/dashboard',
+    },
   ];
 
   return (
@@ -33,7 +38,7 @@ export default function NavbarMenu() {
         [styles['navbar__menu--opened']]: navbarOpen,
       })}
     >
-      <div className="absolute left-0 top-0 flex h-full w-full max-w-screen-xl">
+      <div className="absolute left-0 top-0 flex h-full w-full items-center justify-center">
         <div
           className={clsx(styles['navbar__menu-wrap'], {
             [styles['navbar__menu-wrap--opened']]: navbarOpen,
@@ -45,7 +50,7 @@ export default function NavbarMenu() {
               toHref={navLink.href}
               onClick={openNavbarMenu}
             >
-              {navLink.name}
+              {navLink.name.toUpperCase()}
             </NavbarMenuLink>
           ))}
         </div>

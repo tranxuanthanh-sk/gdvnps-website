@@ -23,7 +23,7 @@ export default function NavbarContent() {
 
   return (
     <NavbarContext.Provider value={{ navbarOpen, openNavbarMenu }}>
-      <div className="z-30 h-fit w-fit">
+      <div className="z-50 h-fit w-fit">
         <NavLink to="/" className="inline-block no-underline">
           <img
             src={GDVNPS_Icon}

@@ -1,5 +1,5 @@
 import type { MetaFunction } from '@remix-run/node';
-import { StarBG } from '~/components/shared/StarBG';
+import { StarBG } from '~/components/StarBG';
 import {
   HeroHeader,
   AboutView,
@@ -28,7 +28,7 @@ export default function Index() {
           <HeroHeader />
         </div>
       </main>
-      <div className="z-40 flex items-center justify-center rounded-s-3xl border-t border-t-[#2f333d] bg-gradient-to-t from-[#0c0f19]/0 to-[#0c0f19] py-10">
+      <div className="z-40 flex items-center justify-center rounded-3xl border-t border-t-[#2f333d] bg-gradient-to-t from-[#0c0f19]/0 to-[#0c0f19] py-10">
         <div className="m-1 mt-36 flex max-w-screen-xl flex-col items-center justify-center gap-4 px-6 lg:m-20">
           <AboutView />
           <FeaturesView />
