@@ -12,7 +12,7 @@ This is the official repository for GDVNPS website. This repository contains all
 - **Styling:** **[Tailwind CSS](https://tailwindcss.com/)**, and **CSS/SCSS modules**
 - **Build Tool:** **[Vite](https://vite.dev/)**
 - **Deployment:** **[Vercel](https://vercel.com/)**
-- **Others:** **[usehooks-ts](https://usehooks-ts.com/)**, **[Prettier](https://prettier.io/)**, **[ESLint](https://eslint.org/)**, **[Husky](https://typicode.github.io/husky/)**, **[lint-staged](https://github.com/lint-staged/lint-staged)**, **[CommitLint](commitlint.js.org)**
+- **Others:** **[usehooks-ts](https://usehooks-ts.com/)**, **[Prettier](https://prettier.io/)**, **[ESLint](https://eslint.org/)**, **[Husky](https://typicode.github.io/husky/)**, **[lint-staged](https://github.com/lint-staged/lint-staged)**, **[CommitLint](https://commitlint.js.org)**
 
 ## Development (for make your own GDPS website)
 
