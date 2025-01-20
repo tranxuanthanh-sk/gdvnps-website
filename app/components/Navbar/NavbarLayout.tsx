@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { useEventListener } from 'usehooks-ts';
 import clsx from 'clsx';
 import styles from './Navbar.module.scss';
 
@@ -9,20 +10,15 @@ export default function NavbarLayout({
 }) {
   const [navbarOnScroll, setNavbarOnScroll] = useState<boolean>(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setNavbarOnScroll(true);
-      } else {
-        setNavbarOnScroll(false);
-      }
-    };
+  const handleScroll = () => {
+    if (window.scrollY > 10) {
+      setNavbarOnScroll(true);
+    } else {
+      setNavbarOnScroll(false);
+    }
+  };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  useEventListener('scroll', handleScroll);
 
   return (
     <nav

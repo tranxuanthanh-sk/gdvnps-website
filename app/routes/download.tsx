@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
 import type { MetaFunction } from '@remix-run/node';
-import { SupportOS } from '~/components/views/download';
+import {
+  SupportOS,
+  DownloadBox,
+  DownloadButton,
+} from '~/components/views/download';
 
 export const meta: MetaFunction = () => {
   return [
@@ -34,7 +38,7 @@ export default function Download() {
     <>
       <main className="flex h-[80vh] w-full items-center justify-center bg-transparent xl:max-h-[800px]">
         <div>
-          <h1 className="text-4xl font-bold text-gray-300 md:text-5xl lg:text-6xl">
+          <h1 className="text-center text-4xl font-bold text-gray-300 md:text-5xl lg:text-6xl">
             Tải xuống
           </h1>
           {release ? (
@@ -51,8 +55,30 @@ export default function Download() {
       <div className="z-40 flex items-center justify-center border-t border-t-[#2f333d] bg-gradient-to-t from-[#0c0f19]/0 to-[#0c0f19] py-10">
         <div className="m-1 mt-36 flex max-w-screen-xl flex-col items-center justify-center gap-4 px-6 lg:m-20">
           <SupportOS />
+          <DownloadDetail />
         </div>
       </div>
     </>
+  );
+}
+
+interface DownloadDetailPropsType {
+  OS_name?: string;
+  link?: string;
+  content?: string;
+}
+
+function DownloadDetail({ OS_name, link, content }: DownloadDetailPropsType) {
+  return (
+    <section className="w-full">
+      <DownloadBox OS_icon="ri:windows-fill">
+        <DownloadButton link={link}>
+          <strong>Tải xuống cho {OS_name}</strong>
+        </DownloadButton>
+        <p className="text-left text-base font-normal leading-[1.85] text-slate-300">
+          {content}
+        </p>
+      </DownloadBox>
+    </section>
   );
 }

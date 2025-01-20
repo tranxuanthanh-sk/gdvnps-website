@@ -3,6 +3,7 @@ import LinkButton from './LinkButton';
 import ViewTitle from './ViewTitle';
 import Image from './Image';
 import Dot from './Dot';
-import BoxGrid from './BoxGrid';
+import GridRow from './GridRow';
+import Box from './Box';
 
-export { LinkTag, LinkButton, ViewTitle, Image, Dot, BoxGrid };
+export { LinkTag, LinkButton, ViewTitle, Image, Dot, GridRow, Box };

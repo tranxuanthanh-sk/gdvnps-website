@@ -1,6 +1,6 @@
 import { Icon } from '@iconify/react';
 import IntroduceViewLayout from '~/layouts/IntroduceViewLayout';
-import { ViewTitle, Dot, BoxGrid } from '~/components/UI';
+import { ViewTitle, Dot, GridRow, Box } from '~/components/UI';
 
 export default function FeaturesView() {
   return (
@@ -23,7 +23,7 @@ export default function FeaturesView() {
       </div>
 
       <GridRow>
-        <BoxGrid>
+        <Box>
           <IconItem icon="ri:24-hours-line" />
           <h1 className="my-2.5 text-left text-xl font-bold text-slate-300">
             Hoạt động 24/24
@@ -31,9 +31,9 @@ export default function FeaturesView() {
           <p className="text-slate-300/98 leading-[1.8] text-slate-300">
             GDVNPS được khởi chạy trên server hoạt động xuyên suốt 24/24.
           </p>
-        </BoxGrid>
+        </Box>
 
-        <BoxGrid>
+        <Box>
           <IconItem icon="ri:chat-smile-2-fill" />
           <h1 className="my-2.5 text-left text-xl font-bold text-slate-300">
             Moderators hoạt động tích cực
@@ -42,9 +42,9 @@ export default function FeaturesView() {
             Cộng đồng của chúng tôi được hỗ trợ bởi các moderators hoạt động
             tích cực.
           </p>
-        </BoxGrid>
+        </Box>
 
-        <BoxGrid>
+        <Box>
           <IconItem icon="ri:star-half-line" />
           <h1 className="my-2.5 text-left text-xl font-bold text-slate-300">
             Mid Standard Rating
@@ -53,9 +53,9 @@ export default function FeaturesView() {
             Không quá nghiêm ngặt như Geometry Dash, GDVNPS có tiêu chuẩn xếp
             hạng không quá cao cho các level.
           </p>
-        </BoxGrid>
+        </Box>
 
-        <BoxGrid>
+        <Box>
           <IconItem icon="rivet-icons:device" />
           <h1 className="my-2.5 text-left text-xl font-bold text-slate-300">
             Nhiều nền tảng
@@ -65,9 +65,9 @@ export default function FeaturesView() {
             , <strong>Android</strong> và <strong>iOS</strong>. Kèm với đó là có
             hỗ trợ <strong>Geode</strong> tốt.
           </p>
-        </BoxGrid>
+        </Box>
 
-        <BoxGrid>
+        <Box>
           <IconItem icon="ic:twotone-balance" />
           <h1 className="my-2.5 text-left text-xl font-bold text-slate-300">
             Đảm bảo tính công bằng
@@ -76,9 +76,9 @@ export default function FeaturesView() {
             Chúng tôi đảm bảo tính công bằng và khách quan cho tất cả mọi người
             trong cộng đồng.
           </p>
-        </BoxGrid>
+        </Box>
 
-        <BoxGrid>
+        <Box>
           <IconItem icon="tdesign:happy-filled" />
           <h1 className="my-2.5 text-left text-xl font-bold text-slate-300">
             Cộng đồng thân thiện
@@ -87,19 +87,9 @@ export default function FeaturesView() {
             Cùng với những tính năng trên, GDVNPS còn có một cộng đồng rất hòa
             đồng và thân thiện.
           </p>
-        </BoxGrid>
+        </Box>
       </GridRow>
     </IntroduceViewLayout>
-  );
-}
-
-function GridRow({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="mt-3.5">
-      <div className="grid grid-cols-1 md:lg:grid-cols-2 lg:grid-cols-3">
-        {children}
-      </div>
-    </div>
   );
 }
 

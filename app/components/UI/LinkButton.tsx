@@ -1,10 +1,10 @@
 import { Link } from '@remix-run/react';
 import clsx from 'clsx';
-import styles from './styles/LinkButton.module.scss';
 
 interface LinkButtonPropsType {
   tag?: 'link' | 'anchor';
   toHref?: string;
+  target: string;
   variant?: 'fill' | 'outline';
   className?: string;
   children?: React.ReactNode;
@@ -13,14 +13,17 @@ interface LinkButtonPropsType {
 export default function LinkButton({
   tag = 'link',
   toHref,
+  target,
   variant = 'fill',
   className,
   children,
   ...props
 }: LinkButtonPropsType) {
   const linkButtonVariants = clsx(className, {
-    [styles.fill]: variant === 'fill',
-    [styles.outline]: variant === 'outline',
+    'rounded-full bg-gradient-to-br from-red-500 via-orange-500 to-yellow-600 text-slate-200 no-underline':
+      variant === 'fill',
+    'inline-block rounded-full border-2 border-orange-500 bg-transparent text-slate-200 no-underline':
+      variant === 'outline',
   });
 
   switch (tag) {
@@ -28,7 +31,8 @@ export default function LinkButton({
       return (
         <Link
           to={`${toHref}`}
-          className={`${clsx(styles['button-link'])} ${linkButtonVariants}`}
+          target={target}
+          className={`inline-block px-3.5 py-4 font-sans ${linkButtonVariants}`}
           {...props}
         >
           {children}
@@ -39,7 +43,8 @@ export default function LinkButton({
       return (
         <a
           href={`${toHref}`}
-          className={`${clsx(styles['button-link'])} ${linkButtonVariants}`}
+          target={target}
+          className={`inline-block px-3.5 py-4 font-sans ${linkButtonVariants}`}
           {...props}
         >
           {children}

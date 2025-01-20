@@ -25,12 +25,7 @@ export const links: LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="vi"
-      dir="ltr"
-      className="scroll-smooth"
-      style={{ scrollbarWidth: 'thin' }}
-    >
+    <html lang="vi" dir="ltr" style={{ scrollbarWidth: 'thin' }}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=0.9" />
