@@ -2,7 +2,7 @@ import { Icon } from '@iconify/react';
 
 export default function SupportOS() {
   return (
-    <div className="mb-5 grid w-full grid-cols-3 items-center justify-center justify-items-center gap-5">
+    <div className="mt-5 grid w-full grid-cols-3 items-center justify-center justify-items-center gap-5">
       <OSIcons />
     </div>
   );
@@ -42,6 +42,6 @@ interface OSIconPropsType {
 
 function OSIcon({ key, icon, title }: OSIconPropsType) {
   return (
-    <Icon icon={icon} key={key} aria-label={title} width={55} height={55} />
+    <Icon icon={icon} key={key} aria-label={title} width={30} height={30} />
   );
 }

@@ -61,12 +61,11 @@ export default function Download() {
               Phiên bản: Đang kiểm tra...
             </p>
           )}
+          <SupportOS />
         </div>
       </main>
       <div className="z-40 flex items-center justify-center border-t border-t-[#2f333d] bg-gradient-to-t from-[#0c0f19]/0 to-[#0c0f19] py-10">
-        <div className="m-1 mt-36 flex max-w-screen-xl flex-col items-center justify-center gap-4 px-6 lg:m-20">
-          <SupportOS />
-
+        <div className="m-1 mt-24 flex max-w-screen-xl flex-col items-center justify-center gap-4 px-6 lg:m-20">
           <GridRow>
             <OSDownloadBox
               OS_name="Windows"
