@@ -1,5 +1,10 @@
 # GDVNPS Offcial Website Source Code
 
+**Progress (will be remove soon):**
+- [x] Home page
+- [x] Download page
+- [ ] FAQ
+
 This repository is licensed under the **[MIT License](LICENSE)**.
 
 This is the official repository for GDVNPS website. This repository contains all the source code and assets.
