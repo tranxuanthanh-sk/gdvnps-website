@@ -1,4 +1,5 @@
 import SupportOS from './SupportOS';
-import DownloadButton from './DownloadButton';
+import OSDownloadBox from './OSDownloadBox';
+import GeodeDownloadBox from './GeodeDownloadBox';
 
-export { SupportOS, DownloadButton };
+export { SupportOS, OSDownloadBox, GeodeDownloadBox };

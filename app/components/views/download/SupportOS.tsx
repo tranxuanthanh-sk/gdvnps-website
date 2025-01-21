@@ -1,9 +1,8 @@
-import { HashLink } from 'react-router-hash-link';
 import { Icon } from '@iconify/react';
 
 export default function SupportOS() {
   return (
-    <div className="my-5 grid w-full grid-cols-3 items-center justify-center justify-items-center gap-5">
+    <div className="mb-5 grid w-full grid-cols-3 items-center justify-center justify-items-center gap-5">
       <OSIcons />
     </div>
   );
@@ -27,7 +26,6 @@ function OSIcons() {
       {OSList.map((OSListItems) => (
         <OSIcon
           key={OSListItems.id}
-          hashHref={`#${OSListItems.title.toLowerCase()}`}
           icon={OSListItems.icon_name}
           title={OSListItems.title}
         />
@@ -39,14 +37,11 @@ function OSIcons() {
 interface OSIconPropsType {
   key?: number;
   icon: string;
-  hashHref: string;
   title: string;
 }
 
-function OSIcon({ key, icon, hashHref, title }: OSIconPropsType) {
+function OSIcon({ key, icon, title }: OSIconPropsType) {
   return (
-    <HashLink key={key} to={hashHref} title={title} className="inline-block">
-      <Icon icon={icon} width={55} height={55} />
-    </HashLink>
+    <Icon icon={icon} key={key} aria-label={title} width={55} height={55} />
   );
 }
