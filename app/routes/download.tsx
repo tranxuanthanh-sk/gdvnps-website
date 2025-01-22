@@ -46,7 +46,7 @@ export default function Download() {
 
   return (
     <>
-      <main className="flex h-[80vh] w-full items-center justify-center bg-transparent xl:max-h-[800px]">
+      <main className="flex h-[75vh] w-full items-center justify-center bg-transparent xl:max-h-[750px]">
         <div>
           <h1 className="text-center text-4xl font-bold text-gray-300 md:text-5xl lg:text-6xl">
             Tải xuống
