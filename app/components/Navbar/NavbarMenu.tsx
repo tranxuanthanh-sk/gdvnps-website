@@ -23,9 +23,8 @@ export default function NavbarMenu() {
   const navLinks: NavLinkObjType = [
     { id: 1, name: 'trang chủ', href: '/' },
     { id: 2, name: 'tải xuống', href: '/download' },
-    { id: 3, name: 'faq', href: 'faq' },
     {
-      id: 4,
+      id: 3,
       name: 'dashboard',
       href: 'https://gdvnps.ps.fhgdps.com/dashboard',
     },
